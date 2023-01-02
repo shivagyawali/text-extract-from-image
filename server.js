@@ -1,13 +1,11 @@
 const express = require("express");
-
 const multer = require("multer");
-
 const tesseract = require("node-tesseract-ocr");
-
+var fs = require("fs");
 const path = require("path");
 
 const app = express();
-var fs = require("fs");
+
 app.use(express.static(path.join(__dirname + "/uploads")));
 
 app.set("view engine", "ejs");
