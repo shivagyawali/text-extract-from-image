@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Extract Text From Image</title>
+    <style>
+        .under-construction {
+            font-size: 22px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="flex justify-center under-construction">
+        <div class="w-full mx-auto">
+            <form action="/extracttextfromimage" method="post" enctype="multipart/form-data">
+                <div class="flex flex-row">
+                    <div>  
+                         <label class="block ">
+                        <span class="sr-only">Choose profile photo</span>
+                        <input type="file" name="file" accept="image/*"
+                            class="block w-full text-sm text-slate-500  file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100" /></div>
+                        <div>
+                         <button
+                            class="block w-full p-2  text-gray-200 rounded-lg font-semibold  bg-green-500">Extract
+                            Text From Image</button>
+                       </div>
+                </div>
+               
+            </form>
+            <div class="selection:bg-fuchsia-300 selection:text-fuchsia-900 mt-5">
+                <p>
+                    <%= data %>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
